@@ -25,8 +25,11 @@ public class TestConversor {
             "Won sul-coreano a la moneda de tu país"
         };
         Conversor c = new Conversor();
-        String msg;
-        msg = c.selectInput(
+        int yn = 0;
+    
+       while(yn==0){
+    
+        String msg = c.selectInput(
                 conversores,
                 "Conversor",
                 "Selecciona el tipo de conversion"
@@ -34,15 +37,25 @@ public class TestConversor {
 
         if (msg == conversores[0]) {
             msg = c.selectInput(
-                conversoresMoneda,
-                "Conversor de Moneda", 
-                "Selecciona la moneda en la que deseas convertir tu dinero"
-        );
-            
-        }else if(msg == conversores[1]){
-         System.out.println(msg+"2");
-        } else{
-       int ync = c.ventanaYesNotCancel();
+                    conversoresMoneda,
+                    "Conversor de Moneda",
+                    "Selecciona la moneda en la que deseas convertir tu dinero"
+            );
+            double valor = 0;
+            valor = Double.parseDouble(JOptionPane.showInputDialog(null, "Introduce el monto a convertir"));
+            valor = c.conversor(valor, msg);
+
+            JOptionPane.showMessageDialog(null, "El monto final es de " + valor);
+
+        } else if (msg == conversores[1]) {
+            System.out.println(msg + "2");
         }
-    }
+
+        yn = c.ventanaYesNot();
+          
+        
+       }
+    
 }
+}
+

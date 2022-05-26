@@ -57,7 +57,7 @@ public class Moneda {
                 null, 
                 "¿Deseas continuar?", 
                 "titulo ventana", 
-                JOptionPane.YES_NO_CANCEL_OPTION, 
+                JOptionPane.YES_OPTION, 
                 JOptionPane.WARNING_MESSAGE
         );
         System.out.println(ventanaYesNotCancel);

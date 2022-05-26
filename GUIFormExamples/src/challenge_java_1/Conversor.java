@@ -18,15 +18,54 @@ public class Conversor {
         return String.valueOf(msg1);
     }
 
-    public int ventanaYesNotCancel() {
+    public int ventanaYesNot() {
 
         return JOptionPane.showConfirmDialog(
                 null,
                 "¿Deseas continuar?",
                 "titulo ventana",
-                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.YES_NO_OPTION,
                 JOptionPane.WARNING_MESSAGE
         );
     }
 
+    public double conversor(double valor, String msg) {
+        switch(msg)
+        {
+    case "la moneda de tu país  a Dólar":
+        valor *= 1.5;
+          break; 
+    case "la moneda de tu país  a Euros" :
+        valor *= 1.5;
+         break; 
+    case "la moneda de tu país  a Libras Esterlinas":
+        valor *= 1.5;
+          break; 
+    case "la moneda de tu país  a Yen Japonés" :
+        valor *= 1.5;
+         break;             
+    case "la moneda de tu país  a Won sul-coreano":
+        valor *= 1.5;
+          break; 
+    case "Dólar a la moneda de tu país" :
+        valor *= 1.5;
+         break; 
+    case "Euros a la moneda de tu país":
+        valor *= 1.5;
+          break; 
+    case "Libras Esterlinas a la moneda de tu país":
+        valor *= 1.5;
+         break;  
+    case "Yen Japonés a la moneda de tu país":
+        valor *= 1.5;
+         break;  
+    case "Won sul-coreano a la moneda de tu país":
+        valor *= 1.5;
+         break;  
+    default : 
+       
+   }
+
+    return valor;
+   }
 }
