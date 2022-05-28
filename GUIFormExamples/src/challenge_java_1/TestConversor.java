@@ -1,6 +1,5 @@
 package challenge_java_1;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class TestConversor {
